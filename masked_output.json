@@ -1,0 +1,1246 @@
+{
+  "pii_shield_version": "1.2",
+  "documents": [
+    {
+      "doc_id": "P01_Discharge_Medications",
+      "source_file": "P01_Discharge_Medications.png",
+      "case_id": "Patient_01",
+      "doc_category": "DISCHARGE_SUMMARY",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "ASG EYE HOSPITALS\nDISCHARGE MEDICATIONS & INSTRUCTIONS\nPatient: [NAME]  Age/Sex: 62/Female  MRN: [MRN]\nDiagnosis: RIGHT EYE Mature Cataract\nProcedure: RIGHT EYE Phacoemulsification with Foldable IOL + TA\nPRESCRIBED MEDICATIONS\n1. Loteprednol 0.5% Eye Drop\nDosage: 4 times/day × 2 weeks then taper\nInstruction: Operated eye. Do not stop abruptly.\n2. Gatifloxacin Eye Drop\nDosage: 4 times/day for 2 weeks\nInstruction: Operated eye.\n3. Refresh Tears / CMC 0.5%\nDosage: 4 times/day for 1 month\nInstruction: Both eyes as needed for dryness.\n4. Homide (Homatropine) Eye Drop\nDosage: 1 drop at night for 5 days\nInstruction: Operated eye.\n5. Tab. Ciprofloxacin 500 mg\nDosage: 1 tablet twice daily after food for 5 days\nInstruction: Full course.\n6. Tab. Diclofenac 50 mg\nDosage: 1 tablet twice daily after food for 3 days\nInstruction: For pain/inflammation.\n7. Cap. Omega-3\nDosage: 1 capsule daily for 1 month\nInstruction: After meals.\nGENERAL INSTRUCTIONS\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Anil Mehta, MS (Ophth)\nAuthorised Signatory\nDocument ID: P01_MED | Synthetic document - no dates as required | For testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "ASG EYE HOSPITALS\nDISCHARGE MEDICATIONS & INSTRUCTIONS\nPatient: [NAME]  Age/Sex: 62/Female  MRN: [MRN]\nDiagnosis: RIGHT EYE Mature Cataract\nProcedure: RIGHT EYE Phacoemulsification with Foldable IOL + TA\nPRESCRIBED MEDICATIONS\n1. Loteprednol 0.5% Eye Drop\nDosage: 4 times/day × 2 weeks then taper\nInstruction: Operated eye. Do not stop abruptly.\n2. Gatifloxacin Eye Drop\nDosage: 4 times/day for 2 weeks\nInstruction: Operated eye.\n3. Refresh Tears / CMC 0.5%\nDosage: 4 times/day for 1 month\nInstruction: Both eyes as needed for dryness.\n4. Homide (Homatropine) Eye Drop\nDosage: 1 drop at night for 5 days\nInstruction: Operated eye.\n5. Tab. Ciprofloxacin 500 mg\nDosage: 1 tablet twice daily after food for 5 days\nInstruction: Full course.\n6. Tab. Diclofenac 50 mg\nDosage: 1 tablet twice daily after food for 3 days\nInstruction: For pain/inflammation.\n7. Cap. Omega-3\nDosage: 1 capsule daily for 1 month\nInstruction: After meals.\nGENERAL INSTRUCTIONS\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Anil Mehta, MS (Ophth)\nAuthorised Signatory\nDocument ID: P01_MED | Synthetic document - no dates as required | For testing only",
+          "ocr_confidence_min": 0.9611,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 64,
+              "end": 82,
+              "length": 18,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 109,
+              "end": 117,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            }
+          ],
+          "masked_image_path": "P01_Discharge_Medications_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P01_Discharge_Summary",
+      "source_file": "P01_Discharge_Summary.pdf",
+      "case_id": "Patient_01",
+      "doc_category": "DISCHARGE_SUMMARY",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "ASG EYE HOSPITALS\nASG HOSPITAL PRIVATE LIMITED\nPlot No. 1, Shyam Nagar, Pal Link Road, Jodhpur, Rajasthan - 342008 | 1800 1200 111\nDISCHARGE SUMMARY\nPatient's Name\n[NAME]\nAge / Sex\n62 / Female\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n05/11/2024\nSurgery Date\n09/11/2024\nDischarge Date\n12/11/2024\nDate of Surgery\n09/11/2024\nDIAGNOSIS:\nRIGHT EYE Mature Cataract\nPROCEDURE: RIGHT EYE Phacoemulsification with Foldable IOL + TA\nHOSPITAL COURSE:\nPatient admitted for elective cataract extraction. Routine blood investigations and ECG were normal. Surgery was carried out under topical anaesthesia\nwith monitored care. Intra-operative findings confirmed mature cataract; nucleus was emulsified and foldable lOL placed in bag. No posterior capsule\nrupture or vitreous disturbance. Post-operatively the eye was quiet. Patient was discharged after observation with detailed medication instructions and\nemergency contact numbers.\nDISCHARGE CONDITION: Stable. Eye quiet. IOL well centered. Advice given.\nYOUR NEXT APPOINTMENT\n1st Visit: 13/11/2024 11:00 AM\n2nd Visit: 20/11/2024 11:00 AM\n3rd Visit: 04/12/2024 11:00 AM\nConsultant: Dr. Anil Mehta, MS (Ophth)\nAuthorised Signatory\nDocument ID: P01_DS | Synthetic test document for Module Reader | Not a real medical record",
+      "total_redactions": 6,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "ASG EYE HOSPITALS\nASG HOSPITAL PRIVATE LIMITED\nPlot No. 1, Shyam Nagar, Pal Link Road, Jodhpur, Rajasthan - 342008 | 1800 1200 111\nDISCHARGE SUMMARY\nPatient's Name\n[NAME]\nAge / Sex\n62 / Female\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n05/11/2024\nSurgery Date\n09/11/2024\nDischarge Date\n12/11/2024\nDate of Surgery\n09/11/2024\nDIAGNOSIS:\nRIGHT EYE Mature Cataract\nPROCEDURE: RIGHT EYE Phacoemulsification with Foldable IOL + TA\nHOSPITAL COURSE:\nPatient admitted for elective cataract extraction. Routine blood investigations and ECG were normal. Surgery was carried out under topical anaesthesia\nwith monitored care. Intra-operative findings confirmed mature cataract; nucleus was emulsified and foldable lOL placed in bag. No posterior capsule\nrupture or vitreous disturbance. Post-operatively the eye was quiet. Patient was discharged after observation with detailed medication instructions and\nemergency contact numbers.\nDISCHARGE CONDITION: Stable. Eye quiet. IOL well centered. Advice given.\nYOUR NEXT APPOINTMENT\n1st Visit: 13/11/2024 11:00 AM\n2nd Visit: 20/11/2024 11:00 AM\n3rd Visit: 04/12/2024 11:00 AM\nConsultant: Dr. Anil Mehta, MS (Ophth)\nAuthorised Signatory\nDocument ID: P01_DS | Synthetic test document for Module Reader | Not a real medical record",
+          "ocr_confidence_min": 0.9735,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 164,
+              "end": 182,
+              "length": 18,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                6
+              ]
+            },
+            {
+              "type": "PHONE",
+              "rule": "label_phone_nextline",
+              "start": 219,
+              "end": 229,
+              "length": 10,
+              "placeholder": "[PHONE]",
+              "page": 1,
+              "block_ids": [
+                10
+              ]
+            },
+            {
+              "type": "AADHAAR",
+              "rule": "label_aadhaar_nextline",
+              "start": 245,
+              "end": 259,
+              "length": 14,
+              "placeholder": "[AADHAAR]",
+              "page": 1,
+              "block_ids": [
+                12
+              ]
+            },
+            {
+              "type": "ADDRESS",
+              "rule": "label_address_nextline",
+              "start": 278,
+              "end": 337,
+              "length": 59,
+              "placeholder": "[ADDRESS]",
+              "page": 1,
+              "block_ids": [
+                14
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 359,
+              "end": 367,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                16
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 373,
+              "end": 383,
+              "length": 10,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                18
+              ]
+            }
+          ],
+          "masked_image_path": "P01_Discharge_Summary_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P01_Lab_Report",
+      "source_file": "P01_Lab_Report.png",
+      "case_id": "Patient_01",
+      "doc_category": "LAB_REPORT",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n62 Years / Female\nSample Collected\n06/11/2024\nReported On\n07/11/2024\nLab / Ref. No.\n[MRN]\nReferred By\nASG EYE HOSPITALS\nTest Performed\nValue Observed\nReference Range\nPCV\n41.5%\n40 - 54 %\nBlood Urea\n32 mg/dl\n15 - 40 mg/dl\nTotal RBC Count\n4.80 million/cumm\n4.5 - 5.5 million/cumm\nPolymorph\n62%\n40 - 75 %\nRandom Blood Sugar\n98 mg/dl\n70 - 140 mg/dl\nSerum Potassium\n4.5 mEq/L\n3.5 - 5.0 mEq/L\nMonocyte Count\n03%\n2 - 10 %\nPlatelet Count\n1.60 lakh/cumm\n1.5 - 4.5 lakh/cumm\nLymphocyte Count\n25%\n20 - 45 %\nEosinophil Count\n02%\n1-6%\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P01_LAB | Synthetic laboratory report | Not a real patient record",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n62 Years / Female\nSample Collected\n06/11/2024\nReported On\n07/11/2024\nLab / Ref. No.\n[MRN]\nReferred By\nASG EYE HOSPITALS\nTest Performed\nValue Observed\nReference Range\nPCV\n41.5%\n40 - 54 %\nBlood Urea\n32 mg/dl\n15 - 40 mg/dl\nTotal RBC Count\n4.80 million/cumm\n4.5 - 5.5 million/cumm\nPolymorph\n62%\n40 - 75 %\nRandom Blood Sugar\n98 mg/dl\n70 - 140 mg/dl\nSerum Potassium\n4.5 mEq/L\n3.5 - 5.0 mEq/L\nMonocyte Count\n03%\n2 - 10 %\nPlatelet Count\n1.60 lakh/cumm\n1.5 - 4.5 lakh/cumm\nLymphocyte Count\n25%\n20 - 45 %\nEosinophil Count\n02%\n1-6%\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P01_LAB | Synthetic laboratory report | Not a real patient record",
+          "ocr_confidence_min": 0.9332,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 236,
+              "end": 254,
+              "length": 18,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                7
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 349,
+              "end": 357,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                15
+              ]
+            }
+          ],
+          "masked_image_path": "P01_Lab_Report_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P01_Surgical_Procedural",
+      "source_file": "P01_Surgical_Procedural.png",
+      "case_id": "Patient_01",
+      "doc_category": "CLINICAL_NOTE",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "ASG EYE HOSPITALS\nOPERATIVE REPORT & ANAESTHESIA RECORD\nPatient: [NAME]  Age/Sex: 62/Female  MRN: [MRN]\nDiagnosis: RIGHT EYE Mature Cataract\nProcedure: RIGHT EYE Phacoemulsification with Foldable IOL + TA\nSurgeon: Dr. Anil Mehta, MS (Ophth) Anaesthetist: Dr. Priya Verma, MD (Anaesth)\nOPERATIVE REPORT\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Spectraphob SPH-6, Power +19.50 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nANAESTHESIA REPORT\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Anil Mehta, MS (Ophth)\nAnaesthetist: Dr. Priya Verma, MD (Anaesth)\nDocument ID: P01_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "ASG EYE HOSPITALS\nOPERATIVE REPORT & ANAESTHESIA RECORD\nPatient: [NAME]  Age/Sex: 62/Female  MRN: [MRN]\nDiagnosis: RIGHT EYE Mature Cataract\nProcedure: RIGHT EYE Phacoemulsification with Foldable IOL + TA\nSurgeon: Dr. Anil Mehta, MS (Ophth) Anaesthetist: Dr. Priya Verma, MD (Anaesth)\nOPERATIVE REPORT\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Spectraphob SPH-6, Power +19.50 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nANAESTHESIA REPORT\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Anil Mehta, MS (Ophth)\nAnaesthetist: Dr. Priya Verma, MD (Anaesth)\nDocument ID: P01_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+          "ocr_confidence_min": 0.9807,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 65,
+              "end": 83,
+              "length": 18,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 110,
+              "end": 118,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            }
+          ],
+          "masked_image_path": "P01_Surgical_Procedural_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P02_Discharge_Medications",
+      "source_file": "P02_Discharge_Medications.png",
+      "case_id": "Patient_02",
+      "doc_category": "DISCHARGE_SUMMARY",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "SHREE RAM HOSPITAL & RESEARCH CENTRE\nDISCHARGE MEDICATIONS & INSTRUCTIONS\nPatient: [NAME]  Age/Sex: 58/Male\nMRN: [MRN]\nDiagnosis: LEFT EYE Senile Cataract with Pseudoexfoliation\nProcedure: LEFT EYE Phacoemulsification with PCIOL under Local Anaesthesia\nPRESCRIBED MEDICATIONS\n1. Prednisolone Acetate 1% Eye Drop\nDosage: 6 times/day for 1 week, then taper 4-3-2-1 weekly\nInstruction: Operated eye only. Shake well before use.\n2. Moxifloxacin 0.5% Eye Drop\nDosage: 4 times/day for 15 days\nInstruction: Operated eye. Keep 5 min gap between drops.\n3. Carboxymethylcellulose 0.5%\nDosage: 4 times/day for 1 month\nInstruction: Both eyes. Use as lubricating drops.\n4. Tropicamide 1% Eye Drop\nDosage: 1 drop at bedtime for 7 days\nInstruction: Operated eye only.\n5. Tab. Moxifloxacin 400 mg\nDosage: 1 tablet twice daily after food for 3 days\nInstruction: Complete the course.\n6. Tab. Pantoprazole 40 mg\nDosage: 1 tablet once daily before breakfast for 5 days\nInstruction: Empty stomach.\n7. Cap. Multivitamin + Antioxidant\nDosage: 1 capsule daily for 30 days\nInstruction: After food.\nGENERAL INSTRUCTIONS\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Kavita Jain, MS (Ophth)\nAuthorised Signatory\nDocument ID: P02_MED | Synthetic document - no dates as required | For testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "SHREE RAM HOSPITAL & RESEARCH CENTRE\nDISCHARGE MEDICATIONS & INSTRUCTIONS\nPatient: [NAME]  Age/Sex: 58/Male\nMRN: [MRN]\nDiagnosis: LEFT EYE Senile Cataract with Pseudoexfoliation\nProcedure: LEFT EYE Phacoemulsification with PCIOL under Local Anaesthesia\nPRESCRIBED MEDICATIONS\n1. Prednisolone Acetate 1% Eye Drop\nDosage: 6 times/day for 1 week, then taper 4-3-2-1 weekly\nInstruction: Operated eye only. Shake well before use.\n2. Moxifloxacin 0.5% Eye Drop\nDosage: 4 times/day for 15 days\nInstruction: Operated eye. Keep 5 min gap between drops.\n3. Carboxymethylcellulose 0.5%\nDosage: 4 times/day for 1 month\nInstruction: Both eyes. Use as lubricating drops.\n4. Tropicamide 1% Eye Drop\nDosage: 1 drop at bedtime for 7 days\nInstruction: Operated eye only.\n5. Tab. Moxifloxacin 400 mg\nDosage: 1 tablet twice daily after food for 3 days\nInstruction: Complete the course.\n6. Tab. Pantoprazole 40 mg\nDosage: 1 tablet once daily before breakfast for 5 days\nInstruction: Empty stomach.\n7. Cap. Multivitamin + Antioxidant\nDosage: 1 capsule daily for 30 days\nInstruction: After food.\nGENERAL INSTRUCTIONS\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Kavita Jain, MS (Ophth)\nAuthorised Signatory\nDocument ID: P02_MED | Synthetic document - no dates as required | For testing only",
+          "ocr_confidence_min": 0.9809,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 83,
+              "end": 99,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn",
+              "start": 123,
+              "end": 131,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                4
+              ]
+            }
+          ],
+          "masked_image_path": "P02_Discharge_Medications_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P02_Discharge_Summary",
+      "source_file": "P02_Discharge_Summary.pdf",
+      "case_id": "Patient_02",
+      "doc_category": "DISCHARGE_SUMMARY",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "SHREE RAM HOSPITAL & RESEARCH CENTRE\nSHREE RAM HOSPITAL & RESEARCH CENTRE\n12, Civil Lines, Near Collectorate, Bhopal, Madhya Pradesh - 462001 | 0755-2556789\nDISCHARGE SUMMARY\nPatient's Name\n[NAME]\nAge / Sex\n58 / Male\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n18/09/2024\nSurgery Date\n21/09/2024\nDischarge Date\n24/09/2024\nDate of Surgery\n21/09/2024\nDIAGNOSIS:\nLEFT EYE Senile Cataract with Pseudoexfoliation\nPROCEDURE: LEFT EYE Phacoemulsification with PCIOL under Local Anaesthesia\nHOSPITAL COURSE:\nPatient came with history of decreasing vision affecting daily activities. After biometry and counseling, surgery was scheduled. Under local anaesthesia,\nclear corneal phacoemulsification was performed successfully. Foldable lOL was implanted. Intra-operative and immediate post-operative period\nremained uneventful. Patient was advised protective eyewear, medication schedule and next review dates, then discharged in stable condition.\nDISCHARGE CONDITION: Stable. Eye quiet. IOL well centered. Advice given.\nYOUR NEXT APPOINTMENT\n1st Visit: 25/09/2024 11:00 AM\n2nd Visit: 02/10/2024 11:00 AM\n3rd Visit: 16/10/2024 11:00 AM\nConsultant: Dr. Kavita Jain, MS (Ophth)\nAuthorised Signatory\nDocument ID: P02_DS | Synthetic test document for Module Reader | Not a real medical record",
+      "total_redactions": 6,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "SHREE RAM HOSPITAL & RESEARCH CENTRE\nSHREE RAM HOSPITAL & RESEARCH CENTRE\n12, Civil Lines, Near Collectorate, Bhopal, Madhya Pradesh - 462001 | 0755-2556789\nDISCHARGE SUMMARY\nPatient's Name\n[NAME]\nAge / Sex\n58 / Male\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n18/09/2024\nSurgery Date\n21/09/2024\nDischarge Date\n24/09/2024\nDate of Surgery\n21/09/2024\nDIAGNOSIS:\nLEFT EYE Senile Cataract with Pseudoexfoliation\nPROCEDURE: LEFT EYE Phacoemulsification with PCIOL under Local Anaesthesia\nHOSPITAL COURSE:\nPatient came with history of decreasing vision affecting daily activities. After biometry and counseling, surgery was scheduled. Under local anaesthesia,\nclear corneal phacoemulsification was performed successfully. Foldable lOL was implanted. Intra-operative and immediate post-operative period\nremained uneventful. Patient was advised protective eyewear, medication schedule and next review dates, then discharged in stable condition.\nDISCHARGE CONDITION: Stable. Eye quiet. IOL well centered. Advice given.\nYOUR NEXT APPOINTMENT\n1st Visit: 25/09/2024 11:00 AM\n2nd Visit: 02/10/2024 11:00 AM\n3rd Visit: 16/10/2024 11:00 AM\nConsultant: Dr. Kavita Jain, MS (Ophth)\nAuthorised Signatory\nDocument ID: P02_DS | Synthetic test document for Module Reader | Not a real medical record",
+          "ocr_confidence_min": 0.9736,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 190,
+              "end": 206,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                6
+              ]
+            },
+            {
+              "type": "PHONE",
+              "rule": "label_phone_nextline",
+              "start": 241,
+              "end": 251,
+              "length": 10,
+              "placeholder": "[PHONE]",
+              "page": 1,
+              "block_ids": [
+                10
+              ]
+            },
+            {
+              "type": "AADHAAR",
+              "rule": "label_aadhaar_nextline",
+              "start": 267,
+              "end": 281,
+              "length": 14,
+              "placeholder": "[AADHAAR]",
+              "page": 1,
+              "block_ids": [
+                12
+              ]
+            },
+            {
+              "type": "ADDRESS",
+              "rule": "label_address_nextline",
+              "start": 300,
+              "end": 367,
+              "length": 67,
+              "placeholder": "[ADDRESS]",
+              "page": 1,
+              "block_ids": [
+                14
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 389,
+              "end": 397,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                16
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 403,
+              "end": 413,
+              "length": 10,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                18
+              ]
+            }
+          ],
+          "masked_image_path": "P02_Discharge_Summary_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P02_Lab_Report",
+      "source_file": "P02_Lab_Report.png",
+      "case_id": "Patient_02",
+      "doc_category": "LAB_REPORT",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n58 Years / Male\nSample Collected\n19/09/2024\nReported On\n19/09/2024\nLab / Ref. No.\n[MRN]\nReferred By\nSHREE RAM HOSPITAL & RESEARCH\nTest Performed\nValue Observed\nReference Range\nEosinophil Count\n04%\n1 - 6 %\nPolymorph\n55%\n40 - 75 %\nMonocyte Count\n07%\n2 - 10 %\nLymphocyte Count\n32%\n20 - 45 %\nSerum Potassium\n4.2 mEq/L\n3.5 - 5.0 mEq/L\nRandom Blood Sugar\n126 mg/dl\n70 - 140 mg/dl\nSerum Creatinine\n1.0 mg/dl\n0.6 - 1.2 mg/dl\nPCV\n38.5%\n40 - 54 %\nBlood Urea\n32 mg/dl\n15 - 40 mg/dl\nHaemoglobin\n13.2 gm%\n12 - 16 gm%\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P02_LAB | Synthetic laboratory report | Not a real patient record",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n58 Years / Male\nSample Collected\n19/09/2024\nReported On\n19/09/2024\nLab / Ref. No.\n[MRN]\nReferred By\nSHREE RAM HOSPITAL & RESEARCH\nTest Performed\nValue Observed\nReference Range\nEosinophil Count\n04%\n1 - 6 %\nPolymorph\n55%\n40 - 75 %\nMonocyte Count\n07%\n2 - 10 %\nLymphocyte Count\n32%\n20 - 45 %\nSerum Potassium\n4.2 mEq/L\n3.5 - 5.0 mEq/L\nRandom Blood Sugar\n126 mg/dl\n70 - 140 mg/dl\nSerum Creatinine\n1.0 mg/dl\n0.6 - 1.2 mg/dl\nPCV\n38.5%\n40 - 54 %\nBlood Urea\n32 mg/dl\n15 - 40 mg/dl\nHaemoglobin\n13.2 gm%\n12 - 16 gm%\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P02_LAB | Synthetic laboratory report | Not a real patient record",
+          "ocr_confidence_min": 0.8213,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 236,
+              "end": 252,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                7
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 345,
+              "end": 353,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                15
+              ]
+            }
+          ],
+          "masked_image_path": "P02_Lab_Report_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P02_Surgical_Procedural",
+      "source_file": "P02_Surgical_Procedural.png",
+      "case_id": "Patient_02",
+      "doc_category": "CLINICAL_NOTE",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "SHREE RAM HOSPITAL & RESEARCH CENTRE\nOPERATIVE REPORT & ANAESTHESIA RECORD\nPatient: [NAME] | Age/Sex: 58/Male | MRN: [MRN]\nDiagnosis: LEFT EYE Senile Cataract with Pseudoexfoliation\nProcedure: LEFT EYE Phacoemulsification with PCIOL under Local Anaesthesia\nSurgeon: Dr. Kavita Jain, MS (Ophth) Anaesthetist: Dr. Suresh Gupta, DA\nOPERATIVE REPORT\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Acrysof IQ SN60WF, Power +21.00 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nANAESTHESIA REPORT\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Kavita Jain, MS (Ophth)\nAnaesthetist: Dr. Suresh Gupta, DA\nDocument ID: P02_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "SHREE RAM HOSPITAL & RESEARCH CENTRE\nOPERATIVE REPORT & ANAESTHESIA RECORD\nPatient: [NAME] | Age/Sex: 58/Male | MRN: [MRN]\nDiagnosis: LEFT EYE Senile Cataract with Pseudoexfoliation\nProcedure: LEFT EYE Phacoemulsification with PCIOL under Local Anaesthesia\nSurgeon: Dr. Kavita Jain, MS (Ophth) Anaesthetist: Dr. Suresh Gupta, DA\nOPERATIVE REPORT\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Acrysof IQ SN60WF, Power +21.00 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nANAESTHESIA REPORT\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Kavita Jain, MS (Ophth)\nAnaesthetist: Dr. Suresh Gupta, DA\nDocument ID: P02_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+          "ocr_confidence_min": 0.9672,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 84,
+              "end": 100,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 127,
+              "end": 135,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            }
+          ],
+          "masked_image_path": "P02_Surgical_Procedural_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P03_Discharge_Medications",
+      "source_file": "P03_Discharge_Medications.png",
+      "case_id": "Patient_03",
+      "doc_category": "DISCHARGE_SUMMARY",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "VIDISHA EYE CARE & RESEARCH INSTITUTE\nDISCHARGE MEDICATIONS & INSTRUCTIONS\nPatient: [NAME]  Age/Sex: 67/Female\nMRN: [MRN]\nDiagnosis: Bilateral Age-related Cataract (Right Eye operated)\nProcedure: RIGHT EYE Phaco with Foldable Hydrophobic IOL\nPRESCRIBED MEDICATIONS\n1. Dexamethasone + Tobramycin Eye Drop\nDosage: 6/4/3/2 times per day weekly taper\nInstruction: Operated eye. Strict taper schedule.\n2. Nepafenac 0.1% Eye Drop\nDosage: 3 times/day for 2 weeks\nInstruction: Operated eye.\n3. Lubricating Eye Drop (Systane)\nDosage: 4 times/day for 1 month\nInstruction: Both eyes.\n4. Tab. Amoxicillin-Clavulanate 625 mg\nDosage: 1 tablet twice daily for 5 days\nInstruction: After food.\n5. Tab. Aceclofenac + Paracetamol\nDosage: 1 tablet twice daily for 3 days\nInstruction: After food.\n6. Tab. Ranitidine 150 mg\nDosage: 1 tablet twice daily for 5 days\nInstruction: Before food.\n7. Cap. Antioxidant Complex\nDosage: 1 capsule daily for 30 days\nInstruction: After food.\nGENERAL INSTRUCTIONS\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Rohan Tiwari, MS, DNB\nAuthorised Signatory\nDocument ID: P03_MED | Synthetic document - no dates as required | For testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "VIDISHA EYE CARE & RESEARCH INSTITUTE\nDISCHARGE MEDICATIONS & INSTRUCTIONS\nPatient: [NAME]  Age/Sex: 67/Female\nMRN: [MRN]\nDiagnosis: Bilateral Age-related Cataract (Right Eye operated)\nProcedure: RIGHT EYE Phaco with Foldable Hydrophobic IOL\nPRESCRIBED MEDICATIONS\n1. Dexamethasone + Tobramycin Eye Drop\nDosage: 6/4/3/2 times per day weekly taper\nInstruction: Operated eye. Strict taper schedule.\n2. Nepafenac 0.1% Eye Drop\nDosage: 3 times/day for 2 weeks\nInstruction: Operated eye.\n3. Lubricating Eye Drop (Systane)\nDosage: 4 times/day for 1 month\nInstruction: Both eyes.\n4. Tab. Amoxicillin-Clavulanate 625 mg\nDosage: 1 tablet twice daily for 5 days\nInstruction: After food.\n5. Tab. Aceclofenac + Paracetamol\nDosage: 1 tablet twice daily for 3 days\nInstruction: After food.\n6. Tab. Ranitidine 150 mg\nDosage: 1 tablet twice daily for 5 days\nInstruction: Before food.\n7. Cap. Antioxidant Complex\nDosage: 1 capsule daily for 30 days\nInstruction: After food.\nGENERAL INSTRUCTIONS\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Rohan Tiwari, MS, DNB\nAuthorised Signatory\nDocument ID: P03_MED | Synthetic document - no dates as required | For testing only",
+          "ocr_confidence_min": 0.9773,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 84,
+              "end": 100,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn",
+              "start": 126,
+              "end": 134,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                4
+              ]
+            }
+          ],
+          "masked_image_path": "P03_Discharge_Medications_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P03_Discharge_Summary",
+      "source_file": "P03_Discharge_Summary.pdf",
+      "case_id": "Patient_03",
+      "doc_category": "DISCHARGE_SUMMARY",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "VIDISHA EYE CARE & RESEARCH INSTITUTE\nVIDISHA EYE CARE & RESEARCH INSTITUTE\nHospital Road, Near Pili Kothi, Vidisha, Madhya Pradesh - 464001 | 07592-234567\nDISCHARGE SUMMARY\nPatient's Name\n[NAME]\nAge / Sex\n67 / Female\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n02/12/2024\nSurgery Date\n06/12/2024\nDischarge Date\n09/12/2024\nDate of Surgery\n06/12/2024\nDIAGNOSIS:\nBilateral Age-related Cataract (Right Eye operated)\nPROCEDURE: RIGHT EYE Phaco with Foldable Hydrophobic IOL\nHOSPITAL COURSE:\nPatient admitted for elective cataract extraction. Routine blood investigations and ECG were normal. Surgery was carried out under topical anaesthesia\nwith monitored care. Intra-operative findings confirmed mature cataract; nucleus was emulsified and foldable lOL placed in bag. No posterior capsule\nrupture or vitreous disturbance. Post-operatively the eye was quiet. Patient was discharged after observation with detailed medication instructions and\nemergency contact numbers.\nDISCHARGE CONDITION: Stable. Eye quiet. IOL well centered. Advice given.\nYOUR NEXT APPOINTMENT\n1st Visit: 10/12/2024 11:00 AM\n2nd Visit: 17/12/2024 11:00 AM\n3rd Visit: 31/12/2024 11:00 AM\nConsultant: Dr. Rohan Tiwari, MS, DNB\nAuthorised Signatory\nDocument ID: P03_DS | Synthetic test document for Module Reader | Not a real medical record",
+      "total_redactions": 6,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "VIDISHA EYE CARE & RESEARCH INSTITUTE\nVIDISHA EYE CARE & RESEARCH INSTITUTE\nHospital Road, Near Pili Kothi, Vidisha, Madhya Pradesh - 464001 | 07592-234567\nDISCHARGE SUMMARY\nPatient's Name\n[NAME]\nAge / Sex\n67 / Female\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n02/12/2024\nSurgery Date\n06/12/2024\nDischarge Date\n09/12/2024\nDate of Surgery\n06/12/2024\nDIAGNOSIS:\nBilateral Age-related Cataract (Right Eye operated)\nPROCEDURE: RIGHT EYE Phaco with Foldable Hydrophobic IOL\nHOSPITAL COURSE:\nPatient admitted for elective cataract extraction. Routine blood investigations and ECG were normal. Surgery was carried out under topical anaesthesia\nwith monitored care. Intra-operative findings confirmed mature cataract; nucleus was emulsified and foldable lOL placed in bag. No posterior capsule\nrupture or vitreous disturbance. Post-operatively the eye was quiet. Patient was discharged after observation with detailed medication instructions and\nemergency contact numbers.\nDISCHARGE CONDITION: Stable. Eye quiet. IOL well centered. Advice given.\nYOUR NEXT APPOINTMENT\n1st Visit: 10/12/2024 11:00 AM\n2nd Visit: 17/12/2024 11:00 AM\n3rd Visit: 31/12/2024 11:00 AM\nConsultant: Dr. Rohan Tiwari, MS, DNB\nAuthorised Signatory\nDocument ID: P03_DS | Synthetic test document for Module Reader | Not a real medical record",
+          "ocr_confidence_min": 0.9736,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 189,
+              "end": 205,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                6
+              ]
+            },
+            {
+              "type": "PHONE",
+              "rule": "label_phone_nextline",
+              "start": 242,
+              "end": 252,
+              "length": 10,
+              "placeholder": "[PHONE]",
+              "page": 1,
+              "block_ids": [
+                10
+              ]
+            },
+            {
+              "type": "AADHAAR",
+              "rule": "label_aadhaar_nextline",
+              "start": 268,
+              "end": 282,
+              "length": 14,
+              "placeholder": "[AADHAAR]",
+              "page": 1,
+              "block_ids": [
+                12
+              ]
+            },
+            {
+              "type": "ADDRESS",
+              "rule": "label_address_nextline",
+              "start": 301,
+              "end": 372,
+              "length": 71,
+              "placeholder": "[ADDRESS]",
+              "page": 1,
+              "block_ids": [
+                14
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 394,
+              "end": 402,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                16
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 408,
+              "end": 418,
+              "length": 10,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                18
+              ]
+            }
+          ],
+          "masked_image_path": "P03_Discharge_Summary_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P03_Lab_Report",
+      "source_file": "P03_Lab_Report.png",
+      "case_id": "Patient_03",
+      "doc_category": "LAB_REPORT",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n67 Years / Female\nSample Collected\n03/12/2024\nReported On\n04/12/2024\nLab / Ref. No.\n[MRN]\nReferred By\nVIDISHA EYE CARE & RESEARCH IN\nTest Performed\nValue Observed\nReference Range\nMonocyte Count\n07%\n2 - 10 %\nTotal RBC Count\n4.80 million/cumm\n4.5 - 5.5 million/cumm\nSerum Potassium\n4.3 mEq/L\n3.5 - 5.0 mEq/L\nRandom Blood Sugar\n145 mg/dl\n70 - 140 mg/dl\nPCV\n40.2%\n40 - 54 %\nPlatelet Count\n2.40 lakh/cumm\n1.5 - 4.5 lakh/cumm\nSerum Sodium\n142 mEq/L\n135 - 145 mEq/L\nPolymorph\n72%\n40 - 75 %\nLymphocyte Count\n32%\n20 - 45 %\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P03_LAB | Synthetic laboratory report | Not a real patient record",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n67 Years / Female\nSample Collected\n03/12/2024\nReported On\n04/12/2024\nLab / Ref. No.\n[MRN]\nReferred By\nVIDISHA EYE CARE & RESEARCH IN\nTest Performed\nValue Observed\nReference Range\nMonocyte Count\n07%\n2 - 10 %\nTotal RBC Count\n4.80 million/cumm\n4.5 - 5.5 million/cumm\nSerum Potassium\n4.3 mEq/L\n3.5 - 5.0 mEq/L\nRandom Blood Sugar\n145 mg/dl\n70 - 140 mg/dl\nPCV\n40.2%\n40 - 54 %\nPlatelet Count\n2.40 lakh/cumm\n1.5 - 4.5 lakh/cumm\nSerum Sodium\n142 mEq/L\n135 - 145 mEq/L\nPolymorph\n72%\n40 - 75 %\nLymphocyte Count\n32%\n20 - 45 %\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P03_LAB | Synthetic laboratory report | Not a real patient record",
+          "ocr_confidence_min": 0.9364,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 236,
+              "end": 252,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                7
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 347,
+              "end": 355,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                15
+              ]
+            }
+          ],
+          "masked_image_path": "P03_Lab_Report_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P03_Surgical_Procedural",
+      "source_file": "P03_Surgical_Procedural.png",
+      "case_id": "Patient_03",
+      "doc_category": "CLINICAL_NOTE",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "VIDISHA EYE CARE & RESEARCH INSTITUTE\nOPERATIVE REPORT & ANAESTHESIA RECORD\nPatient: [NAME]  Age/Sex: 67/Female  MRN: [MRN]\nDiagnosis: Bilateral Age-related Cataract (Right Eye operated)\nProcedure: RIGHT EYE Phaco with Foldable Hydrophobic IOL\nSurgeon: Dr. Rohan Tiwari, MS, DNB Anaesthetist: Dr. Anjali Singh, MD\nOPERATIVE REPORT\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Alcon Clareon, Power +20.00 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nANAESTHESIA REPORT\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Rohan Tiwari, MS, DNB\nAnaesthetist: Dr. Anjali Singh, MD\nDocument ID: P03_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "VIDISHA EYE CARE & RESEARCH INSTITUTE\nOPERATIVE REPORT & ANAESTHESIA RECORD\nPatient: [NAME]  Age/Sex: 67/Female  MRN: [MRN]\nDiagnosis: Bilateral Age-related Cataract (Right Eye operated)\nProcedure: RIGHT EYE Phaco with Foldable Hydrophobic IOL\nSurgeon: Dr. Rohan Tiwari, MS, DNB Anaesthetist: Dr. Anjali Singh, MD\nOPERATIVE REPORT\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Alcon Clareon, Power +20.00 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nANAESTHESIA REPORT\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Rohan Tiwari, MS, DNB\nAnaesthetist: Dr. Anjali Singh, MD\nDocument ID: P03_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+          "ocr_confidence_min": 0.9761,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 85,
+              "end": 101,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 128,
+              "end": 136,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            }
+          ],
+          "masked_image_path": "P03_Surgical_Procedural_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P04_Discharge_Medications",
+      "source_file": "P04_Discharge_Medications.png",
+      "case_id": "Patient_04",
+      "doc_category": "PRESCRIPTION",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "Patient: [NAME] Age/Sex: 55/Male\nMRN: [MRN]\nDiagnosis: RIGHT EYE Soft Cataract with High Myopia\nProcedure: RIGHT EYE Phacoemulsification + Foldable IOL (Clear Corneal)\n1. Loteprednol 0.5% Eye Drop\nDosage: 4 times/day × 2 weeks then taper\nInstruction: Operated eye. Do not stop abruptly.\n2. Gatifloxacin Eye Drop\nDosage: 4 times/day for 2 weeks\nInstruction: Operated eye.\n3. Refresh Tears / CMC 0.5%\nDosage: 4 times/day for 1 month\nInstruction: Both eyes as needed for dryness.\n4. Homide (Homatropine) Eye Drop\nDosage: 1 drop at night for 5 days\nInstruction: Operated eye.\n5. Tab. Ciprofloxacin 500 mg\nDosage: 1 tablet twice daily after food for 5 days\nInstruction: Full course.\n6. Tab. Diclofenac 50 mg\nDosage: 1 tablet twice daily after food for 3 days\nInstruction: For pain/inflammation.\n7. Cap. Omega-3\nDosage: 1 capsule daily for 1 month\nInstruction: After meals.\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Deepak Choudhary, MS\nAuthorised Signatory\nDocument ID: P04_MED | Synthetic document - no dates as required | For testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "Patient: [NAME] Age/Sex: 55/Male\nMRN: [MRN]\nDiagnosis: RIGHT EYE Soft Cataract with High Myopia\nProcedure: RIGHT EYE Phacoemulsification + Foldable IOL (Clear Corneal)\n1. Loteprednol 0.5% Eye Drop\nDosage: 4 times/day × 2 weeks then taper\nInstruction: Operated eye. Do not stop abruptly.\n2. Gatifloxacin Eye Drop\nDosage: 4 times/day for 2 weeks\nInstruction: Operated eye.\n3. Refresh Tears / CMC 0.5%\nDosage: 4 times/day for 1 month\nInstruction: Both eyes as needed for dryness.\n4. Homide (Homatropine) Eye Drop\nDosage: 1 drop at night for 5 days\nInstruction: Operated eye.\n5. Tab. Ciprofloxacin 500 mg\nDosage: 1 tablet twice daily after food for 5 days\nInstruction: Full course.\n6. Tab. Diclofenac 50 mg\nDosage: 1 tablet twice daily after food for 3 days\nInstruction: For pain/inflammation.\n7. Cap. Omega-3\nDosage: 1 capsule daily for 1 month\nInstruction: After meals.\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Deepak Choudhary, MS\nAuthorised Signatory\nDocument ID: P04_MED | Synthetic document - no dates as required | For testing only",
+          "ocr_confidence_min": 0.9839,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 9,
+              "end": 25,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                1
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn",
+              "start": 48,
+              "end": 56,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                2
+              ]
+            }
+          ],
+          "masked_image_path": "P04_Discharge_Medications_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P04_Discharge_Summary",
+      "source_file": "P04_Discharge_Summary.pdf",
+      "case_id": "Patient_04",
+      "doc_category": "CLINICAL_NOTE",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "Patient's Name\n[NAME]\nAge / Sex\n55 / Male\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n14/08/2024\nSurgery Date\n17/08/2024\nDischarge Date\n19/08/2024\nDate of Surgery\n17/08/2024\nRIGHT EYE Soft Cataract with High Myopia\nRIGHT EYE Phacoemulsification + Foldable IOL (Clear Corneal)\nPatient with long-standing visual complaints was evaluated and found fit for surgery. After informed consent, the procedure was performed under local\nanaesthesia. Surgical steps were completed routinely with implantation of foldable IOL. No intra-operative complications noted. Post-operative recovery\nwas smooth. Patient received discharge counseling regarding eye care, medications and warning symptoms, and was discharged.\n1st Visit: 20/08/2024 11:00 AM\n2nd Visit: 27/08/2024 11:00 AM\n3rd Visit: 10/09/2024 11:00 AM\nConsultant: Dr. Deepak Choudhary, MS\nAuthorised Signatory\nDocument ID: P04_DS | Synthetic test document for Module Reader | Not a real medical record",
+      "total_redactions": 6,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "Patient's Name\n[NAME]\nAge / Sex\n55 / Male\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n14/08/2024\nSurgery Date\n17/08/2024\nDischarge Date\n19/08/2024\nDate of Surgery\n17/08/2024\nRIGHT EYE Soft Cataract with High Myopia\nRIGHT EYE Phacoemulsification + Foldable IOL (Clear Corneal)\nPatient with long-standing visual complaints was evaluated and found fit for surgery. After informed consent, the procedure was performed under local\nanaesthesia. Surgical steps were completed routinely with implantation of foldable IOL. No intra-operative complications noted. Post-operative recovery\nwas smooth. Patient received discharge counseling regarding eye care, medications and warning symptoms, and was discharged.\n1st Visit: 20/08/2024 11:00 AM\n2nd Visit: 27/08/2024 11:00 AM\n3rd Visit: 10/09/2024 11:00 AM\nConsultant: Dr. Deepak Choudhary, MS\nAuthorised Signatory\nDocument ID: P04_DS | Synthetic test document for Module Reader | Not a real medical record",
+          "ocr_confidence_min": 0.9809,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 15,
+              "end": 31,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                2
+              ]
+            },
+            {
+              "type": "PHONE",
+              "rule": "label_phone_nextline",
+              "start": 66,
+              "end": 76,
+              "length": 10,
+              "placeholder": "[PHONE]",
+              "page": 1,
+              "block_ids": [
+                6
+              ]
+            },
+            {
+              "type": "AADHAAR",
+              "rule": "label_aadhaar_nextline",
+              "start": 92,
+              "end": 106,
+              "length": 14,
+              "placeholder": "[AADHAAR]",
+              "page": 1,
+              "block_ids": [
+                8
+              ]
+            },
+            {
+              "type": "ADDRESS",
+              "rule": "label_address_nextline",
+              "start": 125,
+              "end": 189,
+              "length": 64,
+              "placeholder": "[ADDRESS]",
+              "page": 1,
+              "block_ids": [
+                10
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 211,
+              "end": 219,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                12
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 225,
+              "end": 235,
+              "length": 10,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                14
+              ]
+            }
+          ],
+          "masked_image_path": "P04_Discharge_Summary_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P04_Lab_Report",
+      "source_file": "P04_Lab_Report.png",
+      "case_id": "Patient_04",
+      "doc_category": "LAB_REPORT",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n55 Years / Male\nSample Collected\n15/08/2024\nReported On\n15/08/2024\nLab / Ref. No.\n[MRN]\nReferred By\nSAI NETRALAYA & MULTISPECIALIT\nTest Performed\nValue Observed\nReference Range\nSerum Sodium\n141 mEq/L\n135 - 145 mEq/L\nTotal WBC Count\n6400 /cumm\n4000 - 11000 /cumm\nHaemoglobin\n11.8 gm%\n12 - 16 gm%\nPCV\n41.5%\n40 - 54 %\nTotal RBC Count\n4.80 million/cumm\n4.5 - 5.5 million/cumm\nMonocyte Count\n07%\n2 -10 %\nPlatelet Count\n2.10 lakh/cumm\n1.5 - 4.5 lakh/cumm\nRandom Blood Sugar\n145 mg/dl\n70 - 140 mg/dl\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P04_LAB | Synthetic laboratory report | Not a real patient record",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n55 Years / Male\nSample Collected\n15/08/2024\nReported On\n15/08/2024\nLab / Ref. No.\n[MRN]\nReferred By\nSAI NETRALAYA & MULTISPECIALIT\nTest Performed\nValue Observed\nReference Range\nSerum Sodium\n141 mEq/L\n135 - 145 mEq/L\nTotal WBC Count\n6400 /cumm\n4000 - 11000 /cumm\nHaemoglobin\n11.8 gm%\n12 - 16 gm%\nPCV\n41.5%\n40 - 54 %\nTotal RBC Count\n4.80 million/cumm\n4.5 - 5.5 million/cumm\nMonocyte Count\n07%\n2 -10 %\nPlatelet Count\n2.10 lakh/cumm\n1.5 - 4.5 lakh/cumm\nRandom Blood Sugar\n145 mg/dl\n70 - 140 mg/dl\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P04_LAB | Synthetic laboratory report | Not a real patient record",
+          "ocr_confidence_min": 0.9234,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 236,
+              "end": 252,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                7
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 345,
+              "end": 353,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                15
+              ]
+            }
+          ],
+          "masked_image_path": "P04_Lab_Report_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P04_Surgical_Procedural",
+      "source_file": "P04_Surgical_Procedural.png",
+      "case_id": "Patient_04",
+      "doc_category": "CLINICAL_NOTE",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "Patient: [NAME] | Age/Sex: 55/Male | MRN: [MRN]\nDiagnosis: RIGHT EYE Soft Cataract with High Myopia\nProcedure: RIGHT EYE Phacoemulsification + Foldable IOL (Clear Corneal)\nSurgeon: Dr. Deepak Choudhary, MS Anaesthetist: Dr. Neha Sharma, MD (Anaesth)\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Tecnis ZCB00, Power +12.50 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Deepak Choudhary, MS\nAnaesthetist: Dr. Neha Sharma, MD (Anaesth)\nDocument ID: P04_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "Patient: [NAME] | Age/Sex: 55/Male | MRN: [MRN]\nDiagnosis: RIGHT EYE Soft Cataract with High Myopia\nProcedure: RIGHT EYE Phacoemulsification + Foldable IOL (Clear Corneal)\nSurgeon: Dr. Deepak Choudhary, MS Anaesthetist: Dr. Neha Sharma, MD (Anaesth)\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Tecnis ZCB00, Power +12.50 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Deepak Choudhary, MS\nAnaesthetist: Dr. Neha Sharma, MD (Anaesth)\nDocument ID: P04_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+          "ocr_confidence_min": 0.9708,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 9,
+              "end": 25,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                1
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 52,
+              "end": 60,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                1
+              ]
+            }
+          ],
+          "masked_image_path": "P04_Surgical_Procedural_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P05_Discharge_Medications",
+      "source_file": "P05_Discharge_Medications.png",
+      "case_id": "Patient_05",
+      "doc_category": "DISCHARGE_SUMMARY",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "APOLLO EYE HOSPITAL\nDISCHARGE MEDICATIONS & INSTRUCTIONS\nPatient: [NAME]  Age/Sex: 71/Female  MRN: [MRN]\nDiagnosis: LEFT EYE Hypermature Cataract\nProcedure: LEFT EYE Phaco + Anterior Vitrectomy + Foldable IOL\nPRESCRIBED MEDICATIONS\n1. Loteprednol 0.5% Eye Drop\nDosage: 4 times/day × 2 weeks then taper\nInstruction: Operated eye. Do not stop abruptly.\n2. Gatifloxacin Eye Drop\nDosage: 4 times/day for 2 weeks\nInstruction: Operated eye.\n3. Refresh Tears / CMC 0.5%\nDosage: 4 times/day for 1 month\nInstruction: Both eyes as needed for dryness.\n4. Homide (Homatropine) Eye Drop\nDosage: 1 drop at night for 5 days\nInstruction: Operated eye.\n5. Tab. Ciprofloxacin 500 mg\nDosage: 1 tablet twice daily after food for 5 days\nInstruction: Full course.\n6. Tab. Diclofenac 50 mg\nDosage: 1 tablet twice daily after food for 3 days\nInstruction: For pain/inflammation.\n7. Cap. Omega-3\nDosage: 1 capsule daily for 1 month\nInstruction: After meals.\nGENERAL INSTRUCTIONS\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Sanjay Mishra, MS, FRCS\nAuthorised Signatory\nDocument ID: P05_MED | Synthetic document - no dates as required | For testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "APOLLO EYE HOSPITAL\nDISCHARGE MEDICATIONS & INSTRUCTIONS\nPatient: [NAME]  Age/Sex: 71/Female  MRN: [MRN]\nDiagnosis: LEFT EYE Hypermature Cataract\nProcedure: LEFT EYE Phaco + Anterior Vitrectomy + Foldable IOL\nPRESCRIBED MEDICATIONS\n1. Loteprednol 0.5% Eye Drop\nDosage: 4 times/day × 2 weeks then taper\nInstruction: Operated eye. Do not stop abruptly.\n2. Gatifloxacin Eye Drop\nDosage: 4 times/day for 2 weeks\nInstruction: Operated eye.\n3. Refresh Tears / CMC 0.5%\nDosage: 4 times/day for 1 month\nInstruction: Both eyes as needed for dryness.\n4. Homide (Homatropine) Eye Drop\nDosage: 1 drop at night for 5 days\nInstruction: Operated eye.\n5. Tab. Ciprofloxacin 500 mg\nDosage: 1 tablet twice daily after food for 5 days\nInstruction: Full course.\n6. Tab. Diclofenac 50 mg\nDosage: 1 tablet twice daily after food for 3 days\nInstruction: For pain/inflammation.\n7. Cap. Omega-3\nDosage: 1 capsule daily for 1 month\nInstruction: After meals.\nGENERAL INSTRUCTIONS\n• Always use a new bottle of eye drops after surgery. Do not share drops.\n• Maintain at least 5 minutes gap between two different eye drops.\n• Wash hands thoroughly before instilling eye drops.\n• Avoid rubbing, pressing or touching the operated eye.\n• Wear protective glasses / shield especially while sleeping for 1-2 weeks.\n• Do not splash water directly into the eye for 1 week. Clean with boiled cooled water.\n• Avoid heavy lifting, bending forward, and dusty environments for 2 weeks.\n• Take oral medicines after food unless otherwise specified.\n• Complete the full course of antibiotics even if you feel better.\n• Report immediately if sudden decrease in vision, severe pain, or discharge occurs.\nConsultant: Dr. Sanjay Mishra, MS, FRCS\nAuthorised Signatory\nDocument ID: P05_MED | Synthetic document - no dates as required | For testing only",
+          "ocr_confidence_min": 0.9635,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 66,
+              "end": 82,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 109,
+              "end": 117,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            }
+          ],
+          "masked_image_path": "P05_Discharge_Medications_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P05_Discharge_Summary",
+      "source_file": "P05_Discharge_Summary.pdf",
+      "case_id": "Patient_05",
+      "doc_category": "DISCHARGE_SUMMARY",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "APOLLO EYE HOSPITAL\nAPOLLO EYE HOSPITAL (A Unit of Apollo Hospitals)\nScheme No. 54, Vijay Nagar, Indore, Madhya Pradesh - 452010 | 0731-4005000\nDISCHARGE SUMMARY\nPatient's Name\n[NAME]\nAge / Sex\n71 / Female\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n22/10/2024\nSurgery Date\n26/10/2024\nDischarge Date\n30/10/2024\nDate of Surgery\n26/10/2024\nDIAGNOSIS:\nLEFT EYE Hypermature Cataract\nPROCEDURE: LEFT EYE Phaco + Anterior Vitrectomy + Foldable IOL\nHOSPITAL COURSE:\nPatient admitted for elective cataract extraction. Routine blood investigations and ECG were normal. Surgery was carried out under topical anaesthesia\nwith monitored care. Intra-operative findings confirmed mature cataract; nucleus was emulsified and foldable lOL placed in bag. No posterior capsule\nrupture or vitreous disturbance. Post-operatively the eye was quiet. Patient was discharged after observation with detailed medication instructions and\nemergency contact numbers.\nDISCHARGE CONDITION: Stable. Eye quiet. IOL well centered. Advice given.\nYOUR NEXT APPOINTMENT\n1st Visit: 31/10/2024 11:00 AM\n2nd Visit: 07/11/2024 11:00 AM\n3rd Visit: 21/11/2024 11:00 AM\nConsultant: Dr. Sanjay Mishra, MS, FRCS\nAuthorised Signatory\nDocument ID: P05_DS | Synthetic test document for Module Reader | Not a real medical record",
+      "total_redactions": 6,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "APOLLO EYE HOSPITAL\nAPOLLO EYE HOSPITAL (A Unit of Apollo Hospitals)\nScheme No. 54, Vijay Nagar, Indore, Madhya Pradesh - 452010 | 0731-4005000\nDISCHARGE SUMMARY\nPatient's Name\n[NAME]\nAge / Sex\n71 / Female\nMobile Number\n[PHONE]\nAadhaar Number\n[AADHAAR]\nPermanent Address\n[ADDRESS]\nMedication / MRN No.\n[MRN]\nUHID\n[MRN]\nAdmission Date\n22/10/2024\nSurgery Date\n26/10/2024\nDischarge Date\n30/10/2024\nDate of Surgery\n26/10/2024\nDIAGNOSIS:\nLEFT EYE Hypermature Cataract\nPROCEDURE: LEFT EYE Phaco + Anterior Vitrectomy + Foldable IOL\nHOSPITAL COURSE:\nPatient admitted for elective cataract extraction. Routine blood investigations and ECG were normal. Surgery was carried out under topical anaesthesia\nwith monitored care. Intra-operative findings confirmed mature cataract; nucleus was emulsified and foldable lOL placed in bag. No posterior capsule\nrupture or vitreous disturbance. Post-operatively the eye was quiet. Patient was discharged after observation with detailed medication instructions and\nemergency contact numbers.\nDISCHARGE CONDITION: Stable. Eye quiet. IOL well centered. Advice given.\nYOUR NEXT APPOINTMENT\n1st Visit: 31/10/2024 11:00 AM\n2nd Visit: 07/11/2024 11:00 AM\n3rd Visit: 21/11/2024 11:00 AM\nConsultant: Dr. Sanjay Mishra, MS, FRCS\nAuthorised Signatory\nDocument ID: P05_DS | Synthetic test document for Module Reader | Not a real medical record",
+          "ocr_confidence_min": 0.9735,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 177,
+              "end": 193,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                6
+              ]
+            },
+            {
+              "type": "PHONE",
+              "rule": "label_phone_nextline",
+              "start": 230,
+              "end": 240,
+              "length": 10,
+              "placeholder": "[PHONE]",
+              "page": 1,
+              "block_ids": [
+                10
+              ]
+            },
+            {
+              "type": "AADHAAR",
+              "rule": "label_aadhaar_nextline",
+              "start": 256,
+              "end": 270,
+              "length": 14,
+              "placeholder": "[AADHAAR]",
+              "page": 1,
+              "block_ids": [
+                12
+              ]
+            },
+            {
+              "type": "ADDRESS",
+              "rule": "label_address_nextline",
+              "start": 289,
+              "end": 359,
+              "length": 70,
+              "placeholder": "[ADDRESS]",
+              "page": 1,
+              "block_ids": [
+                14
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 381,
+              "end": 389,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                16
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "label_mrn_nextline",
+              "start": 395,
+              "end": 405,
+              "length": 10,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                18
+              ]
+            }
+          ],
+          "masked_image_path": "P05_Discharge_Summary_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P05_Lab_Report",
+      "source_file": "P05_Lab_Report.png",
+      "case_id": "Patient_05",
+      "doc_category": "LAB_REPORT",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n71 Years / Female\nSample Collected\n23/10/2024\nReported On\n24/10/2024\nLab / Ref. No.\n[MRN]\nReferred By\nAPOLLO EYE HOSPITAL\nTest Performed\nValue Observed\nReference Range\nSerum Sodium\n136 mEq/L\n135 - 145 mEq/L\nBlood Urea\n22 mg/dl\n15 - 40 mg/dl\nPCV\n42.1%\n40 - 54 %\nPlatelet Count\n2.40 lakh/cumm\n1.5 - 4.5 lakh/cumm\nMonocyte Count\n07%\n2 - 10 %\nRandom Blood Sugar\n132 mg/dl\n70 - 140 mg/dl\nPolymorph\n68%\n40 - 75 %\nTotal WBC Count\n6400 /cumm\n4000 - 11000 /cumm\nSerum Creatinine\n0.95 mg/dl\n0.6 - 1.2 mg/dl\nHaemoglobin\n13.8 gm%\n12 - 16 gm%\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P05_LAB | Synthetic laboratory report | Not a real patient record",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "KRISHNA CLINICAL LABORATORY & DIGITAL X-RAY\nImmunoassay & Pathology Laboratory\nBehind Pili Kothi, Hospital Road, Vidisha (M.P.) | Mob: 9424425529, 8269619778\nTiming: 8.00 A.M. to 8.00 P.M.\nHAEMOGRAM / BIOCHEMISTRY REPORT\nPatient's Name\n[NAME]\nAge / Sex\n71 Years / Female\nSample Collected\n23/10/2024\nReported On\n24/10/2024\nLab / Ref. No.\n[MRN]\nReferred By\nAPOLLO EYE HOSPITAL\nTest Performed\nValue Observed\nReference Range\nSerum Sodium\n136 mEq/L\n135 - 145 mEq/L\nBlood Urea\n22 mg/dl\n15 - 40 mg/dl\nPCV\n42.1%\n40 - 54 %\nPlatelet Count\n2.40 lakh/cumm\n1.5 - 4.5 lakh/cumm\nMonocyte Count\n07%\n2 - 10 %\nRandom Blood Sugar\n132 mg/dl\n70 - 140 mg/dl\nPolymorph\n68%\n40 - 75 %\nTotal WBC Count\n6400 /cumm\n4000 - 11000 /cumm\nSerum Creatinine\n0.95 mg/dl\n0.6 - 1.2 mg/dl\nHaemoglobin\n13.8 gm%\n12 - 16 gm%\nThis is a Professional Opinion, Not Diagnosis. Please Co-relate Clinically.\nChecked by:\nPathologist:\nDocument ID: P05_LAB | Synthetic laboratory report | Not a real patient record",
+          "ocr_confidence_min": 0.933,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name_nextline",
+              "start": 236,
+              "end": 252,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                7
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 347,
+              "end": 355,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                15
+              ]
+            }
+          ],
+          "masked_image_path": "P05_Lab_Report_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    },
+    {
+      "doc_id": "P05_Surgical_Procedural",
+      "source_file": "P05_Surgical_Procedural.png",
+      "case_id": "Patient_05",
+      "doc_category": "CLINICAL_NOTE",
+      "pii_shield_version": "1.2",
+      "reader_status": "AUTO_COMPLETE",
+      "ready_for_extraction": true,
+      "masked_text": "APOLLO EYE HOSPITAL\nOPERATIVE REPORT & ANAESTHESIA RECORD\nPatient: [NAME] | Age/Sex: 71/Female  MRN: [MRN]\nDiagnosis: LEFT EYE Hypermature Cataract\nProcedure: LEFT EYE Phaco + Anterior Vitrectomy + Foldable IOL\nSurgeon: Dr. Sanjay Mishra, MS, FRCS Anaesthetist: Dr. Ritu Patel, DA, DNB\nOPERATIVE REPORT\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Rayner C-flex, Power +22.00 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nANAESTHESIA REPORT\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Sanjay Mishra, MS, FRCS\nAnaesthetist: Dr. Ritu Patel, DA, DNB\nDocument ID: P05_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+      "total_redactions": 2,
+      "pages": [
+        {
+          "page": 1,
+          "status": "OK",
+          "hold_reasons": [],
+          "masked_text": "APOLLO EYE HOSPITAL\nOPERATIVE REPORT & ANAESTHESIA RECORD\nPatient: [NAME] | Age/Sex: 71/Female  MRN: [MRN]\nDiagnosis: LEFT EYE Hypermature Cataract\nProcedure: LEFT EYE Phaco + Anterior Vitrectomy + Foldable IOL\nSurgeon: Dr. Sanjay Mishra, MS, FRCS Anaesthetist: Dr. Ritu Patel, DA, DNB\nOPERATIVE REPORT\nPre-operative Diagnosis: As above.\nPost-operative Diagnosis: Same.\nProcedure Performed: As above under local anaesthesia.\nOperative Findings & Technique:\n• Patient positioned supine. Operated eye prepared and draped under sterile conditions.\n• Peribulbar / topical anaesthesia administered. Speculum applied.\n• Clear corneal incision (2.8 mm) made temporally / superiorly.\n• Continuous curvilinear capsulorhexis performed with Utrata forceps.\n• Hydrodissection and hydrodelineation carried out.\n• Nucleus emulsified using phacoemulsification (stop-and-chop / divide-and-conquer).\n• Cortical matter aspirated with irrigation-aspiration probe.\n• Capsular bag filled with viscoelastic. Foldable IOL injected and positioned in the bag.\n• IOL used: Rayner C-flex, Power +22.00 D.\n• Viscoelastic thoroughly removed. Incision hydrated / sutured if required.\n• Subconjunctival antibiotic-steroid given. Eye patched.\nSpecimens: None.\nComplications: None. Posterior capsule intact. No vitreous loss.\nEstimated Blood Loss: Minimal.\nCondition at end of procedure: Stable. IOL well centered. Eye quiet.\nANAESTHESIA REPORT\nType of Anaesthesia: Local (Peribulbar / Topical) with monitored anaesthesia care.\nAirway: Spontaneous breathing. Oxygen via nasal cannula / face mask as reguired.\nMonitoring: Continuous pulse oximetry, NIBP, ECG.\nMedications Administered:\n• Local anaesthetic: Lignocaine 2% + Bupivacaine 0.5% (peribulbar) / Topical proparacaine.\n• Sedation (if used): Midazolam 1 mg IV / Fentanyl 25-50 mcg IV as needed.\n• Antibiotic prophylaxis: as per institutional protocol.\nVital Signs: Remained stable throughout the procedure. No significant fluctuation.\nIntra-operative Events: Uneventful.\nPost-anaesthesia Condition: Awake, oriented, haemodynamically stable. Shifted to recovery.\nSurgeon: Dr. Sanjay Mishra, MS, FRCS\nAnaesthetist: Dr. Ritu Patel, DA, DNB\nDocument ID: P05_SURG | Synthetic operative & anaesthesia record - no dates | Testing only",
+          "ocr_confidence_min": 0.9767,
+          "strict_mode": false,
+          "needs_human_review": false,
+          "redaction_log": [
+            {
+              "type": "NAME",
+              "rule": "label_name",
+              "start": 67,
+              "end": 83,
+              "length": 16,
+              "placeholder": "[NAME]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            },
+            {
+              "type": "MRN",
+              "rule": "mrn_pattern",
+              "start": 111,
+              "end": 119,
+              "length": 8,
+              "placeholder": "[MRN]",
+              "page": 1,
+              "block_ids": [
+                3
+              ]
+            }
+          ],
+          "masked_image_path": "P05_Surgical_Procedural_p1_masked.png",
+          "masked_image_dir": "/home/workdir/artifacts/masked_images"
+        }
+      ]
+    }
+  ],
+  "masked_images_dir": "/home/workdir/artifacts/masked_images"
+}
