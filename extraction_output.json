@@ -1,0 +1,23 @@
+{
+  "diagnoses": [
+    {
+      "name": "community-acquired pneumonia",
+      "event_date": "2026-10-20",
+      "source_text": "The discharge diagnosis was community-acquired pneumonia, documented on 20 October 2026."
+    }
+  ],
+  "procedures": [
+    {
+      "name": "chest X-ray",
+      "event_date": "2026-10-21",
+      "source_text": "A chest X-ray was performed on 21 October 2026."
+    },
+    {
+      "name": "complete blood count (CBC) laboratory test",
+      "event_date": "2026-10-20",
+      "source_text": "A complete blood count (CBC) laboratory test was collected on 20 October 2026."
+    }
+  ],
+  "admission_date": "2026-10-20",
+  "discharge_date": "2026-10-23"
+}
