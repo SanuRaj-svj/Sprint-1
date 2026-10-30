@@ -1,0 +1,9 @@
+# paddlepaddle-gpu must come from the CUDA 12.6 index, not plain PyPI:
+#   pip install paddlepaddle-gpu==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
+paddleocr
+pdf2image
+opencv-python-headless
+supabase
+httpx==0.28.1
+pydantic==2.14.1
+# system package (Colab/Ubuntu): apt-get install -y poppler-utils

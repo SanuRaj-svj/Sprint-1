@@ -1,0 +1,7 @@
+.env
+*.zip
+01_raw_inputs/
+ocr_output/
+pages/
+__pycache__/
+.ipynb_checkpoints/
