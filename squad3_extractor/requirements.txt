@@ -1,0 +1,5 @@
+google-genai
+pydantic
+pymupdf
+supabase
+httpx==0.28.1
