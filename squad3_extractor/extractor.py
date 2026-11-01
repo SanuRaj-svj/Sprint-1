@@ -5,18 +5,11 @@ import time
 from google import genai
 from google.genai import types, errors
 from schemas import ClinicalExtraction
+from terminology import normalize_diagnosis, normalize_procedure
+from validator import validate_extraction
 
 
-# Initialize Gemini client
-api_key = os.getenv("GEMINI_API_KEY")
-
-if not api_key:
-    raise ValueError(
-        "GEMINI_API_KEY is not set. "
-        "Set it in your terminal before running main.py."
-    )
-
-client = genai.Client(api_key=api_key)
+client = None
 
 
 # Instructions for clinical information extraction
@@ -43,6 +36,21 @@ Rules:
 """
 
 
+def _get_client():
+    global client
+
+    if client is None:
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError(
+                "GEMINI_API_KEY is not set. "
+                "Set it in your environment before running extraction."
+            )
+        client = genai.Client(api_key=api_key)
+
+    return client
+
+
 def extract_clinical_facts(
     document_text: str,
 ) -> ClinicalExtraction:
@@ -54,7 +62,7 @@ def extract_clinical_facts(
         A validated ClinicalExtraction Pydantic object.
     """
 
-    if not document_text or not document_text.strip():
+    if not isinstance(document_text, str) or not document_text.strip():
         raise ValueError("The clinical document text is empty.")
 
     prompt = f"""
@@ -71,7 +79,7 @@ Extract information from the document below.
 
     for attempt in range(max_attempts):
         try:
-            response = client.models.generate_content(
+            response = _get_client().models.generate_content(
                 model="gemini-3.5-flash",
                 contents=prompt,
                 config=types.GenerateContentConfig(
@@ -90,6 +98,19 @@ Extract information from the document below.
             result = ClinicalExtraction.model_validate_json(
                 response.text
             )
+
+            for diagnosis in result.diagnoses:
+                diagnosis.name = normalize_diagnosis(diagnosis.name)
+
+            for procedure in result.procedures:
+                procedure.name = normalize_procedure(procedure.name)
+
+            validation_errors = validate_extraction(result)
+            if validation_errors:
+                raise ValueError(
+                    "Clinical extraction validation failed:\n"
+                    + "\n".join(validation_errors)
+                )
 
             return result
 

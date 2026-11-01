@@ -1,5 +1,7 @@
 from datetime import date
 
+import pytest
+
 from schemas import ClinicalExtraction, ClinicalFact
 from validator import validate_extraction
 
@@ -75,7 +77,6 @@ def test_missing_procedure_source_text_is_reported():
     )
 
 
-```python
 def test_empty_procedure_name_is_reported():
     facts = ClinicalExtraction(
         procedures=[
@@ -109,28 +110,6 @@ def test_missing_diagnosis_source_text_is_reported():
     )
 
 
-def test_missing_procedure_source_text_is_reported():
-    facts = ClinicalExtraction(
-        procedures=[
-            ClinicalFact(
-                name="chest X-ray",
-                source_text="   ",
-            )
-        ]
-    )
-
-    errors = validate_extraction(facts)
-
-    assert any(
-        "no supporting source text" in error
-        for error in errors
-    )
-
-
 def test_non_clinical_extraction_input_raises_type_error():
-    try:
-        validate_extraction({})
-        assert False, "Expected TypeError was not raised."
-    except TypeError as error:
-        assert "ClinicalExtraction object" in str(error)
-    
+    with pytest.raises(TypeError, match="ClinicalExtraction object"):
+        validate_extraction({"diagnoses": []})

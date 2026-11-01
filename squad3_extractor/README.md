@@ -1,6 +1,8 @@
 # Squad 3: Clinical fact extractor
 
 Extracts diagnoses, procedures and admission/discharge dates from PII-masked document text using Gemini.
+Extracted names are normalized through the reviewed aliases and validated before they
+are returned to either pipeline.
 
 ## Two ways to run
 

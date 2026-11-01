@@ -166,7 +166,7 @@ def run(sb, extract_fn, case_numbers=None, dry=False, force=False):
 
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    # Imported here because extractor.py needs GEMINI_API_KEY the moment it is imported.
-    from extractor import extract_clinical_facts            # Squad 3's file, untouched
+    # Import at runtime; the API key is checked when extraction is requested.
+    from extractor import extract_clinical_facts
     run(connect(), extract_clinical_facts, args or None,
         dry="--dry-run" in sys.argv, force="--force" in sys.argv)
