@@ -1,29 +1,5 @@
 """
 Squad 3 <-> Supabase connector  (reads PII-masked text, writes extracted clinical facts).
-
-This file does NOT change extractor.py, schemas.py, pdf_reader.py or main.py. It only:
-  1. READS   claim_documents.redacted_ocr_json -> masked_text   (written by Squad 2)
-             for cases at pipeline_stage = PENDING_FHIR and documents at PENDING_FHIR,
-  2. CALLS   extractor.extract_clinical_facts()  exactly as Squad 3 wrote it,
-  3. WRITES  claim_documents.extracted_clinical_facts   (the ClinicalExtraction JSON, same
-                                                         shape as extraction_output.json)
-             claim_documents.audit_summary["squad3_extraction"]   (counts + timestamp, merged)
-             claim_documents.processing_status -> COMPLETED, fhir_completed_at
-             claims_cases.master_fhir_bundle_json   (all documents' facts combined)
-             claims_cases.admission_date / discharge_date          (only if currently empty)
-             claims_cases.pipeline_stage -> COMPLETED   (only when EVERY document is extracted)
-
-Safe to re-run: documents that already have facts are not sent to Gemini again (they are just
-finalised), and a case that is not fully extracted stays at PENDING_FHIR so it can be retried.
-
-Run (from the squad3_extractor/ folder):
-    export SUPABASE_URL="https://xxxx.supabase.co"
-    export SUPABASE_SERVICE_KEY="<service_role key>"
-    export GEMINI_API_KEY="<gemini key>"
-    python db_runner.py                       # every case at pipeline_stage = PENDING_FHIR
-    python db_runner.py PA-2026-TEST01        # only these case numbers
-    python db_runner.py --dry-run             # do everything except write to Supabase
-    python db_runner.py --force               # re-extract documents that already have facts
 """
 import sys
 from datetime import datetime, timezone
