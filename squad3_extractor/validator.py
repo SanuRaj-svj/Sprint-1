@@ -16,7 +16,7 @@ def validate_extraction(facts: ClinicalExtraction) -> list[str]:
 
     errors = []
 
-    # Validate diagnoses
+    
     for index, diagnosis in enumerate(facts.diagnoses):
         if not diagnosis.name or not diagnosis.name.strip():
             errors.append(
@@ -28,7 +28,7 @@ def validate_extraction(facts: ClinicalExtraction) -> list[str]:
                 f"Diagnosis {index + 1} has no supporting source text."
             )
 
-    # Validate procedures
+    
     for index, procedure in enumerate(facts.procedures):
         if not procedure.name or not procedure.name.strip():
             errors.append(
@@ -40,7 +40,7 @@ def validate_extraction(facts: ClinicalExtraction) -> list[str]:
                 f"Procedure {index + 1} has no supporting source text."
             )
 
-    # Validate admission and discharge dates
+   
     if (
         facts.admission_date is not None
         and facts.discharge_date is not None
