@@ -1,24 +1,3 @@
-"""
-Intake: put documents into Supabase so Squad 1 can find them. Replaces the one-off cell that was
-used to copy files from Colab storage into the database.
-
-What it does for one case
-  1. checks every file up front (type, size, duplicate names) - nothing is written if any file is bad,
-  2. creates the claims_cases row at stage INTAKE_IN_PROGRESS (Squad 1 ignores that stage),
-  3. uploads each file to raw-medical-docs/{case_number}/{file_name},
-  4. creates one claim_documents row per file (processing_status = PENDING_OCR),
-  5. only then flips the case to PENDING_OCR - Squad 1 can never see a half-uploaded case.
-
-Re-sending a clearer scan for an RFI case:  intake_case(..., replace=True)  (CLI: --replace)
-Safe to re-run: files already in the case are skipped unless replace=True.
-
-CLI (from the orchestrator/ folder, with SUPABASE_URL / SUPABASE_SERVICE_KEY exported):
-    python intake.py PA-2026-0001 ./scans/discharge.pdf ./scans/lab.png
-    python intake.py PA-2026-0001 ./scans_for_case_1/            # a folder = all supported files in it
-    python intake.py --inbox ./inbox          # one case per patient folder: Patient_01_Name/(docs/)files -> case Patient_01
-    python intake.py PA-2026-0001 ./clear_scan.png --replace      # answer an RFI
-    python intake.py ... --dry-run                                # check only, write nothing
-"""
 import mimetypes
 import re
 import sys
@@ -28,7 +7,6 @@ from pathlib import Path
 from common import (RAW_BUCKET, SUPPORTED_EXTS, MAX_UPLOAD_BYTES, STAGE_INTAKE, STAGE_PENDING_OCR,
                     STAGE_RFI, STAGE_OCR_FAILED, safe_name, safe_filename, doc_id_from_name, connect)
 
-# A case in any other stage is already moving through (or finished) the pipeline: refuse to add files.
 REOPENABLE_STAGES = {STAGE_INTAKE, STAGE_PENDING_OCR, STAGE_RFI, STAGE_OCR_FAILED}
 
 
@@ -37,16 +15,11 @@ class IntakeError(Exception):
 
 
 def default_case_number(folder_name):
-    """'Patient_01_Sunita_Sharma' -> 'Patient_01'. The patient's name must never become a case number
-    (it would end up in the database, the storage path and every log). Other folder names are used as they are."""
     m = re.search(r"Patient[_ ]?(\d+)", str(folder_name), re.IGNORECASE)
     return f"Patient_{int(m.group(1)):02d}" if m else str(folder_name)
 
 
 def find_inbox_root(path):
-    """A zip often wraps everything in one extra folder. Step into it while the folder holds exactly one
-    sub-folder, no files, and that sub-folder is itself a container (it has neither a 'docs' folder nor
-    documents of its own - i.e. it is not a patient folder)."""
     p = Path(path)
     while True:
         subs = [x for x in p.iterdir() if x.is_dir() and not x.name.startswith((".", "__MACOSX"))]
@@ -62,10 +35,6 @@ def find_inbox_root(path):
 
 
 def collect_files(paths, ignored=None):
-    """Expand folders into the document files inside them (non-recursive).
-    If a folder has a 'docs' sub-folder, that is used (so a sibling 'preprocessed/' folder of derived images is
-    never uploaded by mistake). Files of other types found inside a folder (json, txt, ...) are skipped and
-    listed in `ignored`; a file named explicitly is never skipped - it is validated instead."""
     out = []
     for p in paths:
         p = Path(p)
@@ -85,7 +54,6 @@ def collect_files(paths, ignored=None):
 
 
 def validate_files(files):
-    """Return a list of human-readable problems (empty list = all good)."""
     problems, seen = [], {}
     if not files:
         problems.append("no files given")
@@ -143,7 +111,6 @@ def _get_or_create_case(sb, case_number, dry):
 
 
 def intake_case(sb, case_number, paths, replace=False, dry=False):
-    """Upload `paths` (files and/or folders) as one case. Returns a summary dict."""
     case_number = str(case_number).strip()
     if not case_number:
         raise IntakeError("case number is empty")
@@ -206,8 +173,6 @@ def intake_case(sb, case_number, paths, replace=False, dry=False):
 
 
 def intake_inbox(sb, inbox, replace=False, dry=False, case_namer=default_case_number):
-    """inbox/<patient folder>/(docs/)<files>  ->  one case per patient folder.
-    The case number is case_namer(folder name); by default 'Patient_01_Sunita_Sharma' -> 'Patient_01'."""
     folders = sorted(p for p in Path(inbox).iterdir()
                      if p.is_dir() and not p.name.startswith((".", "__MACOSX")))
     numbers = [case_namer(p.name) for p in folders]

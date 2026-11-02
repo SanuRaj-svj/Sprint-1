@@ -1,13 +1,3 @@
-"""
-Reviewer screen for Colab / Jupyter (needs ipywidgets, which Colab has).
-
-    import review_ui
-    review_ui.show(sb, pipeline)          # pipeline is optional: if given, a finished case is pushed through
-                                          # Squad 2 and Squad 3 automatically when the reviewer saves.
-Each uncertain line is shown as a cropped image with the OCR text pre-filled. The reviewer chooses
-  Correct as shown | I fixed the text | Unreadable - leave out
-and, per document, can send the whole scan back to the hospital instead.
-"""
 import human_review as hr
 
 

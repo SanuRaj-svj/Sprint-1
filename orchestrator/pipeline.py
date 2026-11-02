@@ -1,15 +1,3 @@
-"""
-Pipeline runner: Squad 1 -> (human-review gate) -> Squad 2 -> Squad 3, hands-free.
-
-Nothing in any squad is modified or copied:
-  * Squad 1 lives in a notebook, so its cells are loaded from OCR_reader/OCR.ipynb at run time and executed
-    unchanged in one namespace (the Colab-only connection cell and the demo cells are not run).
-  * Squad 2 and Squad 3 are run exactly as their READMEs say (`python db_runner.py [case numbers]`) in a
-    subprocess. A subprocess is required: both folders contain a file called db_runner.py, and importing
-    both into one process silently gives you the same module twice.
-
-The squads already hand over through claims_cases.pipeline_stage; this file only decides *when* to run each one.
-"""
 import json
 import os
 import subprocess
@@ -21,23 +9,20 @@ from common import (STAGE_INTAKE, STAGE_PENDING_OCR, STAGE_RFI, STAGE_REVIEW, ST
                     STAGE_PENDING_FHIR, STAGE_COMPLETED, STAGE_OCR_FAILED)
 import human_review
 
-MAX_ATTEMPTS = 2          # a case that a squad leaves unchanged this many cycles in a row is reported, not retried
+MAX_ATTEMPTS = 2          
 
 
-# ---------------------------------------------------------------- Squad 1 (loaded from the notebook, unchanged)
+# ---------------------------------------------------------------- Squad 1
 _SQUAD1_MARKERS = ("def load_document_pages",        # loader + preprocessing cell
                    "def process_document_to_json",   # OCR core cell
                    "def run_supabase_batch_pipeline")  # Supabase batch runner cell
 
 
 def load_squad1(repo_root, sb):
-    """Execute Squad 1's definition cells from OCR_reader/OCR.ipynb, untouched, in a private namespace.
-    Returns the namespace; run_supabase_batch_pipeline / print_batch_summary live in it.
-    Needs paddleocr + poppler installed (the Colab install cells do that)."""
     nb = json.loads((Path(repo_root) / "OCR_reader" / "OCR.ipynb").read_text(encoding="utf-8"))
     code_cells = ["".join(c["source"]) for c in nb["cells"] if c["cell_type"] == "code"]
-    ns = {"__name__": "squad1_ocr",            # != "__main__", so the notebook's demo / auto-run blocks stay off
-          "supabase": sb}                      # the global Squad 1's code expects
+    ns = {"__name__": "squad1_ocr",           
+          "supabase": sb}                      
     done = set()
     for marker in _SQUAD1_MARKERS:
         src = next((s for s in code_cells if marker in s), None)
@@ -47,12 +32,12 @@ def load_squad1(repo_root, sb):
         if src in done:                                 # one cell can hold more than one marker
             continue
         done.add(src)
-        src = "\n".join(l for l in src.splitlines() if not l.lstrip().startswith(("!", "%")))   # drop shell magics
+        src = "\n".join(l for l in src.splitlines() if not l.lstrip().startswith(("!", "%")))   
         exec(compile(src, f"<OCR.ipynb: {marker}>", "exec"), ns)
     return ns
 
 
-# ---------------------------------------------------------------- Squad 2 / 3 (subprocess, as in their READMEs)
+# ---------------------------------------------------------------- Squad 2 / 3
 def subprocess_runner(folder, name):
     def run(case_numbers):
         print(f"\n>>> {name}: python db_runner.py {' '.join(case_numbers)}")
@@ -74,7 +59,6 @@ def _cases(sb, *stages):
 
 
 def snapshot(sb):
-    """{case_number: (stage, tuple of doc statuses)} - used to tell whether a cycle changed anything."""
     cases = sb.table("claims_cases").select("case_id, case_number, pipeline_stage").execute().data or []
     docs = sb.table("claim_documents").select("case_id, processing_status").execute().data or []
     by = {}
@@ -84,7 +68,6 @@ def snapshot(sb):
 
 
 def has_ocr_work(sb):
-    """Mirrors Squad 1's own discovery rule: a case at PENDING_OCR, or any document still at PENDING_OCR."""
     if _cases(sb, STAGE_PENDING_OCR):
         return True
     return bool(sb.table("claim_documents").select("doc_id").eq("processing_status", "PENDING_OCR").execute().data)
@@ -114,7 +97,7 @@ class Pipeline:
         self.run_squad2 = run_squad2 or subprocess_runner(self.root / "squad2_pii", "Squad 2 (PII masking)")
         self.run_squad3 = run_squad3 or subprocess_runner(self.root / "squad3_extractor", "Squad 3 (clinical extractor)")
         self.max_attempts = max_attempts
-        self.attempts = {}                              # (squad, case_number, stage) -> cycles left unchanged
+        self.attempts = {}                              
 
     # -- Squad 1
     def _squad1(self):
@@ -123,7 +106,7 @@ class Pipeline:
         print("\n>>> Squad 1 (OCR): run_supabase_batch_pipeline()")
         manifest = self.ns["run_supabase_batch_pipeline"]()
         self.ns["print_batch_summary"](manifest)
-        for c in manifest["cases"]:                     # a case Squad 1 could not finish keeps its stage: count it
+        for c in manifest["cases"]:                     
             if str(c["next_pipeline_stage"]).endswith("(unchanged)"):
                 k = ("ocr", c["case_number"])
                 self.attempts[k] = self.attempts.get(k, 0) + 1
@@ -151,7 +134,6 @@ class Pipeline:
                 self.attempts[(squad, cn, stage)] = self.attempts.get((squad, cn, stage), 0) + 1
 
     def run_cycle(self):
-        """One pass over every stage. Returns True if anything changed."""
         before = snapshot(self.sb)
         self._squad1()
         held = human_review.hold_cases_for_review(self.sb)
@@ -162,8 +144,6 @@ class Pipeline:
         return snapshot(self.sb) != before
 
     def run_until_settled(self, max_cycles=10):
-        """Keep cycling until a pass changes nothing: every case is then COMPLETED or waiting for a person
-        (human review / hospital rescan). This is the 'feed Squad 1 and walk away' call."""
         for i in range(1, max_cycles + 1):
             print(f"\n================ cycle {i} ================")
             if not self.run_cycle():
@@ -171,7 +151,6 @@ class Pipeline:
         print_status(self.sb)
 
     def watch(self, poll_seconds=30, max_minutes=60):
-        """Poll for new work (e.g. fresh intake) for a while. Stop the cell with the stop button."""
         end = time.time() + max_minutes * 60
         while time.time() < end:
             if self.run_cycle():

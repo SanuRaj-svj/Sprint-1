@@ -1,43 +1,14 @@
-"""
-Human-review stage (the 'pending human review' step promised in the Socratic defence, Q1).
-
-Why it exists
-  Squad 1 routes every OCR block to AUTO / SUGGEST_CONFIRM / HUMAN_REVIEW. Only AUTO text flows on; the other
-  blocks are blocked (blocked_downstream = true) and Squad 2/3 never see them. Nothing in the squads asks a
-  person about those blocks, so they used to vanish silently. This module closes that gap WITHOUT changing a
-  squad: it sits between Squad 1 and Squad 2 and uses only the fields Squad 1 already writes.
-
-Flow
-  Squad 1 -> case at PENDING_PII
-          -> hold_cases_for_review()   case has unreviewed uncertain blocks  -> stage PENDING_HUMAN_REVIEW
-          -> a person works through get_review_queue() (cropped image + suggested text)
-          -> apply_decisions()         writes the verified text into the Squad 1 contract
-                                       (downstream_value, blocked_downstream=false, verified_status=HUMAN_VERIFIED)
-          -> when nothing is pending, the case goes back to PENDING_PII and Squad 2 picks it up as normal.
-
-Reviewer actions per block
-  CONFIRM     the OCR text shown is correct
-  EDIT        use the text the reviewer typed
-  UNREADABLE  leave this text out (a conscious human decision, recorded)
-Per document
-  request_rescan()   page is not usable at all -> RFI_BLURRY_SCAN, case goes to RFI_RESCAN_REQUIRED
-
-Only the Squad 1 JSON contract is touched, and only on documents that are still waiting for Squad 2.
-"""
 from common import (STAGE_PENDING_PII, STAGE_REVIEW, STAGE_RFI, PREVIEW_BUCKET, now_iso)
 
 REVIEW_ROUTINGS = {"SUGGEST_CONFIRM", "HUMAN_REVIEW"}
 ACTIONS = {"CONFIRM", "EDIT", "UNREADABLE"}
-MIN_ALNUM_CHARS = 2          # blocks with less text than this (stray marks) are not worth a reviewer's time
-
+MIN_ALNUM_CHARS = 2          
 
 def _meaningful(text):
     return sum(ch.isalnum() for ch in str(text or "")) >= MIN_ALNUM_CHARS
 
 
 def pending_blocks(raw_doc):
-    """Blocks of one Squad-1 document that still need a person: uncertain routing, not yet reviewed, on a
-    page that is not already being sent back for a rescan. Returns [(page_number, block_dict)]."""
     out = []
     for pg in (raw_doc or {}).get("pages", []):
         if pg.get("page_action") == "TRIGGER_PAGE_RFI_RESCAN":
@@ -62,8 +33,6 @@ def _pending_in_case(docs):
 
 # ---------------------------------------------------------------- 1. gate
 def hold_cases_for_review(sb, dry=False):
-    """Call AFTER Squad 1 and BEFORE Squad 2. Moves every PENDING_PII case that still has uncertain blocks to
-    PENDING_HUMAN_REVIEW so that Squad 2 (which only looks at PENDING_PII) skips it. Returns [(case_number, n)]."""
     held = []
     cases = sb.table("claims_cases").select("case_id, case_number, pipeline_stage") \
               .eq("pipeline_stage", STAGE_PENDING_PII).execute().data or []
@@ -78,7 +47,6 @@ def hold_cases_for_review(sb, dry=False):
 
 # ---------------------------------------------------------------- 2. queue
 def get_review_queue(sb, case_number=None):
-    """Everything a reviewer has to look at, one dict per block, ready for a UI."""
     q = sb.table("claims_cases").select("case_id, case_number").eq("pipeline_stage", STAGE_REVIEW)
     cases = q.execute().data or []
     if case_number:
@@ -100,7 +68,6 @@ def get_review_queue(sb, case_number=None):
 
 
 def download_snippet(sb, key):
-    """PNG bytes of the cropped line image (processed-previews bucket), or None."""
     if not key:
         return None
     try:
@@ -111,9 +78,6 @@ def download_snippet(sb, key):
 
 # ---------------------------------------------------------------- 3. decisions
 def apply_decisions(sb, case_number, decisions, reviewer):
-    """decisions: [{"doc_id", "page", "block_id", "action": CONFIRM|EDIT|UNREADABLE, "text": <for EDIT>}].
-    Writes them into raw_ocr_json and, if nothing is pending any more, releases the case to PENDING_PII.
-    Returns {"applied": n, "still_pending": n, "released": bool}."""
     if not reviewer or not str(reviewer).strip():
         raise ValueError("reviewer name is required (it goes into the audit trail)")
     case = sb.table("claims_cases").select("case_id, case_number, pipeline_stage") \
@@ -179,8 +143,6 @@ def release_if_complete(sb, case_uuid):
 
 
 def request_rescan(sb, case_number, doc_id, reason, reviewer):
-    """The scan is unusable: send it back to the hospital (same RFI state Squad 1 uses for blurry pages).
-    The hospital's new file goes in via intake.py --replace and Squad 1 OCRs it again."""
     reason = (reason or "").strip() or "page not legible"
     sb.table("claim_documents").update({
         "processing_status": "RFI_BLURRY_SCAN", "is_confidence_acceptable": False,
