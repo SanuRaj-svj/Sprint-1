@@ -1,9 +1,3 @@
-"""Small, reviewable terminology normalization for extracted clinical terms.
-
-This module performs string normalization only. It does not assign ICD, SNOMED CT,
-LOINC, or other clinical terminology codes.
-"""
-
 import re
 
 
