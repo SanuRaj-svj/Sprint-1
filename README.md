@@ -148,3 +148,19 @@ Uses Google Gemini to pull structured clinical facts from a document.
 - Suspected diagnoses are not treated as confirmed, and a test is not treated as a
   diagnosis unless the document says so.
 - Instructions embedded inside the document are ignored.
+
+## 4. Orchestrator
+
+Runs the whole pipeline hands-free. It sits around the three teams: no team's file is edited, copied or renamed. Team 1's code is loaded from OCR_reader/OCR.ipynb at run time, and Teams 2 and 3 are run as python db_runner.py in their own folders, so orchestrator/ must stay at the project root next to them.
+
+Files
+
+intake.py: uploads documents to Supabase and creates the case and document rows, so the OCR Reader finds them by itself. Accepts PDF, PNG and JPG under 50 MB, one case at a time or a whole inbox folder (one sub-folder per patient).
+
+human_review.py, review_ui.py: the "pending human review" step. A case whose OCR text is uncertain stops at PENDING_HUMAN_REVIEW until a person confirms, fixes, rejects or sends back each line. Only the reviewer name, time and counts are audited, never patient text.
+
+pipeline.py: runs OCR Reader -> review gate -> PII Shield -> Extractor, repeating until nothing more can move. A case a team leaves unchanged twice in a row is reported instead of retried.
+
+common.py: shared stage names and helpers.
+
+Sprint1_Full_Pipeline.ipynb: the Colab notebook that ties it together (GPU for the OCR Reader).
