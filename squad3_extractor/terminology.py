@@ -11,7 +11,7 @@ DIAGNOSIS_ALIASES = {
     # Existing alias
     "community acquired pneumonia": "community-acquired pneumonia",
 
-    # Canonical wording observed in the Sprint-01 candidate inventory.
+  # from 20 documents
     "right eye mature cataract": "RIGHT EYE Mature Cataract",
     "left eye senile cataract with pseudoexfoliation":
         "LEFT EYE Senile Cataract with Pseudoexfoliation",
@@ -32,7 +32,7 @@ PROCEDURE_ALIASES = {
     "complete blood count": "complete blood count",
     "cbc": "complete blood count (CBC) laboratory test",
 
-    # Canonical wording observed in the Sprint-01 candidate inventory.
+    #input 20 docs data
     "right eye phacoemulsification with foldable iol + ta":
         "RIGHT EYE Phacoemulsification with Foldable IOL + TA",
     "left eye phacoemulsification with pciol under local anaesthesia":
