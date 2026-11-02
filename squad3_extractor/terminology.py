@@ -25,14 +25,14 @@ DIAGNOSIS_ALIASES = {
 }
 
 PROCEDURE_ALIASES = {
-    # Existing aliases
+    #input 20 docs data diagonises and procedures
     "chest xray": "chest X-ray",
     "chest x-ray": "chest X-ray",
     "chest x ray": "chest X-ray",
     "complete blood count": "complete blood count",
     "cbc": "complete blood count (CBC) laboratory test",
 
-    #input 20 docs data
+    
     "right eye phacoemulsification with foldable iol + ta":
         "RIGHT EYE Phacoemulsification with Foldable IOL + TA",
     "left eye phacoemulsification with pciol under local anaesthesia":
