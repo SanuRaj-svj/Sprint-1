@@ -6,13 +6,13 @@ from extractor import extract_clinical_facts
 
 def process_document(pdf_path: str) -> dict:
 
-    # Step 1: Read PDF
+   
     document_text = extract_pdf_text(pdf_path)
 
-    # Step 2: Extract clinical facts
+  
     result = extract_clinical_facts(document_text)
 
-    # Step 3: Convert validated output to JSON-compatible data
+    
     output = result.model_dump(mode="json")
 
     return output
