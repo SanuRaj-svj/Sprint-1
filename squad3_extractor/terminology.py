@@ -8,10 +8,10 @@ import re
 
 
 DIAGNOSIS_ALIASES = {
-    # Existing alias
+  
     "community acquired pneumonia": "community-acquired pneumonia",
 
-  # from 20 documents
+ 
     "right eye mature cataract": "RIGHT EYE Mature Cataract",
     "left eye senile cataract with pseudoexfoliation":
         "LEFT EYE Senile Cataract with Pseudoexfoliation",
